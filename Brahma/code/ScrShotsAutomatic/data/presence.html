@@ -1,0 +1,58 @@
+<html>
+<head>
+<title>Brahma::Log Presence</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<link rel="stylesheet" type="text/css" href="infostyles.css"/>
+<script type="text/javascript" src="device_info.js"></script>
+<script type="text/javascript" src="form_load.js"></script>
+</head>
+<body onload="load_form_values();">
+<!-- common header for all the help pages -->
+<table id="container" style="border-style:solid;">
+<tr id="infoheader">
+<th rowspan="5" style="border-right:2px;border-style:solid;"><img src="brahma_icon.png" alt=""></th>
+<td><h2 style="color:#EA6E18;">Brahma v2012.1</h2></td>
+</tr>
+<tr id="infocontent"><td><b>email</b> : <a id="help_links" href="mailto:brahma@flaminghorns.com">brahma@flaminghorns.com</a></td></tr>
+<tr id="infocontent"><td><b>www</b> : <a id="help_links" href="http://brahma.flaminghorns.com">http://brahma.flaminghorns.com</a></td></tr>
+<tr id="infocontent"><td><b>twitter</b> : <a id="help_links" href="https://twitter.com/#!/brahma_s60">@brahma_s60</a></td></tr>
+</table>
+
+<div style="text-align:center;">
+<br/>
+<a href="menu.html" class="menu_button">Back to Help Options</a>
+</div>
+<hr/>
+<span id="infocontent">Log Presence</span>
+<div id="presence" style="display: block;font-size: 12px;">
+Register your presence with Brahma servers. The information that you share with us is publicly listed. So if you are concerned with any info being made public just uncheck it. The IMEI is not transmitted,it's just a HASH of the IMEI. So it's completely safe.Enter either the email id or imei hash so it enables to maintain relation with your other submissions. <i>The email & IMEI hash are not publicly listed.</i>
+</div> 
+<hr/>
+
+<form action="" method="post" name="presence_info" style="font-size: 12px;"  onsubmit="validate_presence_details();">
+<!-- The values for these checkbox will be set using JS -->
+<br/>
+<input type="checkbox" name="h_device_model" value=""><div id="fld1" style="display:inline;">Device model</div>
+<br/>
+<input type="checkbox" name="h_firmware_version" value=""><div id="fld2" style="display:inline;">Device model</div>
+<br/>
+<input type="checkbox" name="h_symbian_version" value=""><div id="fld3" style="display:inline;">Device model</div>
+<br/>
+<input type="checkbox" name="h_s60_version" value=""><div id="fld4" style="display:inline;">Device model</div>
+<br/>
+<input type="checkbox" name="h_total_ram" value=""><div id="fld5" style="display:inline;">Device model</div>
+<br/>
+<input type="checkbox" name="h_uptime" value=""><div id="fld6" style="display:inline;">Device model</div>
+<br/>
+<input type="checkbox" name="h_country_code" value=""><div id="fld7" style="display:inline;">Device model</div>
+<br/>
+<input type="checkbox" name="h_imei_hash" value=""><div id="fld8" style="display:inline;word-wrap: break-word;">Device model</div>
+<br/>
+<br/>
+<label>Enter email-id : </label> <input size="50" type="text" name="presence_email" maxlength="256" value=""/>
+<div style="text-align:center;">
+<button type="submit">Log Presence</button>
+</div>
+</form>
+</body>
+</html>

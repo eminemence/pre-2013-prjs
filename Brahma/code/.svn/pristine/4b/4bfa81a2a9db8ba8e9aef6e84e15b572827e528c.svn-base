@@ -1,0 +1,146 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+<title>Brahma::About Info</title>
+<link rel="stylesheet" type="text/css" href="infostyles.css"/>
+<script language="JavaScript" type="text/javascript" src="device_info.js"/>
+<script language="JavaScript" type="text/javascript">
+<!--
+function toggle_section(section, buttid)
+{
+	var ele = document.getElementById(section);
+   	var butt = document.getElementById(buttid);
+    
+   if (ele.style.display=="block"){
+		ele.style.display="none";
+    butt.value="Expand";
+    }
+	else{
+		ele.style.display="block";
+        butt.value="Collapse";
+    }
+}
+
+//-->
+</script>
+
+</head>
+<body>
+
+<table id="container">
+<tr>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+</td>
+</tr>
+<tr id="infoheader"><td><h2>Brahma</h2></td></tr>
+<tr id="infoheader"><td><h4>v2012.1</h4></td></tr>
+<tr id="infoheader"><td><h4>Create screenshots in god mode.</h4></td></tr>
+<tr id="infoheader"><td>Designed & Developed by <b>Mayur Kankanwadi & Shanmugapriya Kankanwadi</b>.&copy; 2011-2012.</td></tr>
+<tr id="infoheader"><td><b>Twitter</b> : <a id="help_links" href="https://twitter.com/#!/brahma_s60">@brahma_s60</a></td></tr>
+<tr id="infoheader"><td><b>Email</b> : <a href="mailto:brahma@flaminghorns.com">brahma@flaminghorns.com</a><hr/></td></tr>
+<tr id="infoheader"><td><b>Client-side technologies</b> : Symbian C++, Series 60 UI, Symbian DB, SVG. </td></tr>
+<tr id="infoheader"><td><b>Server-side technologies</b> : PHP, MySql, HTML, JS, CSS.<hr/></td></tr>
+<tr id="infoheader"><td><a href="man_page.html">See also Brahma : Manual</a><hr/></td></tr>
+
+<tr id="infocontent"><td><b>Log Presence</b>
+<div id="content_button">
+<input name ="presence_button" type="button" value="Expand/Collapse" onclick="javascript:toggle_section('presence', 'presence_button');"/>
+</div>
+<div id="presence" style="display: block;">
+Register your presence or usage of Brahma by submitting this simple form. 
+The information being submitted is optional and can be seen on the Brahma server.
+</div> 
+<hr/>
+</td></tr>
+
+<tr id="infocontent"><td><b>Feedback</b>
+<div id="content_button">
+<input name ="feedback_button" type="button" value="Expand/Collapse" onclick="javascript:toggle_section('feedback', 'feedback_button');"/>
+</div>
+<div id="feedback" style="display: block;">
+</div>  
+<hr/></td></tr>
+
+<tr id="infocontent"><td><b>Recommendations</b>
+<div id="content_button">
+<input name ="recom_button" type="button" value="Expand/Collapse" onclick="javascript:toggle_section('recom', 'recom_button');"/>
+</div>
+<div id="recom" style="display: block;">
+</div>  
+<hr/></td></tr>
+
+<tr id="infocontent"><td><b>Program info</b>
+<div id="content_button">
+<input name ="pginfo_button" type="button" value="Expand/Collapse" onclick="javascript:toggle_section('pginfo', 'pginfo_button');"/>
+</div>
+<div id="pginfo" style="display: block;">
+</div>
+<hr/></td></tr>
+
+<tr id="infocontent"><td>
+<b>FAQ's</b> 
+<div id="content_button">
+<input name ="faq_button" type="button" value="Expand/Collapse" onclick="javascript:toggle_section('faqs', 'faq_button');"/>
+</div>
+<div id="faqs" style="display: block;">
+<div id="ques"> Q: What does Brahma do?</div>
+<div id="ans">
+A: Brahma will let you take screen shots of your favorite application in an automated manner.
+It facilitates taking single & multiple screenshots for a fixed duration. It also embeds your watermark.
+</div>
+<br/>
+
+<div id="ques"> Q: What all Symbian platforms are supported?</div>
+<div id="ans">A: Brahma v2012.1 supports Symbian^3 devices. The S60 5th edition support is not tested, but in theory this application should also run on them.</div>
+<br/>
+
+<div id="ques"> Q: How to support future development of Brahma? </div>
+<div id="ans">A: The many ways in which the future development of Brahma can be supported are:
+<ul>
+<li>The simplest and best way is to buy the app from Ovi store.</li>
+<li>Get the source code from sourceforge, make your own copy and show it off to others.</li>
+<li>Contribute ideas and improvements to future versions.</li>
+<li>Review it on your site or blog.</li>
+<li>Report pirated copies of this application. Yes, even though the source code is open, there will be still people who will the app binary sold through Ovi Store. So please report such occurances.</li>
+<li>Report license violations.</li>
+<li>Simply take screenshots using it and brag about it :).</li>
+<li>If the above forms don't fit your bill, simply send a mail to <a href="mailto:brahma@flaminghorns.com">brahma@flaminghorns.com</a> for any queries, reports, bugs, appreciation or critical comments.</li>
+</ul>
+</div>
+
+<div id="ques"> Q: What all applications can be launched in the "App screenshots till exit" mode?</div>
+<div id="ans">A: Currently only Symbian C++ native UI apps are supported. Widgets (.html) & midlets(.fakeapp) are not shown in the app list and hence need to be manually launched.</div>
+<br/>
+</div>
+
+</div>
+<hr/>
+</td></tr>
+
+<tr id="infocontent"><td><b>License</b>
+<div id="content_button">
+<input name ="license_button" type="button" value="Expand/Collapse" onclick="javascript:toggle_section('license', 'license_button');"/>
+</div>
+<div id="license" style="display: block;">
+This application is licensed under GPLv3. It is open-source and the code can be used for personal and commercial use without any restrictions apart from those mentioned in the GPL license.
+</div>  
+<hr/></td></tr>
+
+<tr id="infocontent"><td>
+<b>Source code link</b> : <a href="http://foo.com">http://foo.com</a>
+<hr/></td></tr>
+
+<tr id="infocontent">
+<td>
+<hr/></td>
+</tr>
+
+
+</table>
+</body>
+</html>

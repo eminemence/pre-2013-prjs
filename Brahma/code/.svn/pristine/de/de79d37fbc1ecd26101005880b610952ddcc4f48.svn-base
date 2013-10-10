@@ -1,0 +1,92 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+<title>Brahma::Help & FAQ's</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>  
+<link rel="stylesheet" type="text/css" href="infostyles.css"/>
+
+</head>
+<body>
+
+<!-- common header for all the help pages -->
+<table id="container" style="border-style:solid;">
+<tr id="infoheader">
+<th rowspan="5" style="border-right:2px;border-style:solid;"><img src="brahma_icon.png" alt=""></th>
+<td><h2 style="color:#EA6E18;">Brahma v2012.1</h2></td>
+</tr>
+<tr id="infocontent" style="text-align:center;"><td>An open-source, multi-featured Symbian^3 native app for taking screenshots with ease.</td></tr>
+<tr id="infocontent"><td><b>email</b> : <a id="help_links" href="mailto:brahma@flaminghorns.com">brahma@flaminghorns.com</a></td></tr>
+<tr id="infocontent"><td><b>www</b> : <a id="help_links" href="http://brahma.flaminghorns.com">http://brahma.flaminghorns.com</a></td></tr>
+<tr id="infocontent"><td><b>twitter</b> : <a id="help_links" href="https://twitter.com/#!/brahma_s60">@brahma_s60</a></td></tr>
+</table>
+
+<div style="text-align:center;">
+<br/>
+<a href="menu.html" class="menu_button">Back to Help Options</a>
+</div>
+<hr/>
+
+<tr id="infocontent"><td>
+<center style="font-family:sans-serif;"><b>FAQ's</b></center> 
+<div id="faqs" style="display: block;">
+<div id="ques"> Q: What does Brahma do?</div>
+<div id="ans">
+A: Brahma will let you take screen shots of your favorite application in an automated manner.
+It facilitates taking single & multiple screenshots for a fixed duration.Symbian native apps can be launched for taking screenshots. Currently onlt Symbian native apps are supported.
+</div>
+<br/>
+<div id="ques">Q: What is the reason behind making Brahma?</div>
+<div id="ans">A: We have not seen a decent screenshot app on the Symbian devices. The screenshot apps that we have seen still seem to be stuck in the keybased interface mode, hardly any innovation is seen in the UI.
+So we thought of making a screenshot app which uses the touch functionality to the max. Whether we have been successful or not is for you to judge.
+</div>
+<br/>
+
+
+<div id="ques"> Q: What all Symbian platforms are supported?</div>
+<div id="ans">A: Brahma v2012.1 supports Symbian^3 devices. The S60 5th edition support is not tested, but it may also run on them.</div>
+<br/>
+
+<div id="ques"> Q: How to support future development of Brahma? </div>
+<div id="ans">A: The many ways in which the future development of Brahma can be supported are:
+<ul>
+<li>The simplest and best way is to buy the app from Ovi store.</li>
+<li>Get the source code, make your own copy and show it off to others. </li>
+<li>Contribute ideas and improvements to future versions.</li>
+<li>Review it on your site or blog.Spreading the word about the app will be best thing you can do for us.</li>
+<li>Simply take screenshots using it and brag about it :).</li>
+</ul>
+</div>
+<br/>
+<div id="ques"> Q: Where do I get the source from?</div>
+<div id="ans"> A: The sources can be requested by sending a mail to <a id="help_links" href="mailto:brahma@flaminghorns.com">brahma@flaminghorns.com</a>. The archived sources of v2012.1 will be mailed back to you. Also the intention is to make the source code available online, but no definite date for the same can be given now.</div>
+<br/>
+<div id="ques"> Q: When is the next version scheduled for release?</div>
+<div id="ans">A: It depends on two things. First, is the response to the 2012.1 version of Brahma, which will give us the appropriate momentum & push to work for the next version. 
+And the second is the number of features that would make the next version, if there are no substantial features to be upgraded we will not get out the next version. So if you have any good ideas about improving
+Brahma please do submit them at Brahma support forums. Apart from the version upgrade a small update is scheduled to be rolled out in 3 months after the release.</div>
+<br/>
+<div id="ques"> Q: Can I share this app with my friends?</div>
+<div id="ans">A: Yes, of course why not. Just get the sources , build it , modify it and spread the code.</div>
+<br/>
+<div id="ques"> Q: Where can I report issues/bugs?</div>
+<div id="ans">A: Please visit Brahma support forums.We will try our best to address the issue. Also while reporting it would be best to be as descriptive as possible.</div>
+<br/>
+<div id="ques"> Q: Where can I give feedback for this app?</div>
+<div id="ans">A: For all the bricks & bouquets please visit Brahma support forums.You can provide your review at the Nokia Ovi Store site as well, but providing comments on the Brahma web site will be more helpful.</div>
+<br/>
+<div id="ques"> Q: What all applications can be launched in the "App screenshots till exit" mode?</div>
+<div id="ans">A: Currently only Symbian C++ native UI apps are supported. Widgets (.html) & midlets(.fakeapp) are not shown in the app list and hence need to be manually launched.</div>
+<br/>
+<div id="ques"> Q: In "App screenshots till exit" mode, even after exiting the selected app, the screenshots action does not stop ?</div>
+<div id="ans">A: There are some apps like the camera app or device search which basically do a fake exit. This is impossible to detect and hence the screenshots continue to be taken. In such cases, it is advised to just stop the action manually.</div>
+<br/>
+
+</div>
+
+</div>
+<hr/>
+</td></tr>
+
+</body>
+</html>

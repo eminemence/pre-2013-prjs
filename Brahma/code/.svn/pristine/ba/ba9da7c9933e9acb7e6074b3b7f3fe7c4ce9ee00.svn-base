@@ -1,0 +1,55 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>Brahma::Bug Report</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>  
+<link rel="stylesheet" type="text/css" href="infostyles.css"/>
+<script type="text/javascript" src="device_info.js"></script>
+<script type="text/javascript" src="form_load.js"></script>
+</head>
+<body onload="load_form_values('bug_report');">
+<!-- common header for all the help pages -->
+<table id="container" style="border-style:solid;">
+<tr id="infoheader">
+<th rowspan="5" style="border-right:2px;border-style:solid;"><img src="brahma_icon.png" alt=""></th>
+<td><h2 style="color:#EA6E18;">Brahma v2012.1</h2></td>
+</tr>
+<tr id="infocontent"><td><b>email</b> : <a id="help_links" href="mailto:brahma@flaminghorns.com">brahma@flaminghorns.com</a></td></tr>
+<tr id="infocontent"><td><b>www</b> : <a id="help_links" href="http://brahma.flaminghorns.com">http://brahma.flaminghorns.com</a></td></tr>
+<tr id="infocontent"><td><b>twitter</b> : <a id="help_links" href="https://twitter.com/#!/brahma_s60">@brahma_s60</a></td></tr>
+</table>
+
+<div style="text-align:center;">
+<br/>
+<a href="menu.html" class="menu_button">Back to Help Options</a>
+</div>
+<hr/>
+<form action="" method="post" name="bug_report" style="font-size: 12px;"  onsubmit="validate_bug_details();">
+<label> Enter steps to reproduce issue/crash : </label>
+<br/>
+<textarea rows="5" cols="50" name="issue_details">
+</textarea>
+<br/>
+<input type="checkbox" name="h_device_model" value=""><div id="fld1" style="display:inline;">Device model</div>
+<br/>
+<input type="checkbox" name="h_firmware_version" value=""><div id="fld2" style="display:inline;">Device model</div>
+<br/>
+<input type="checkbox" name="h_symbian_version" value=""><div id="fld3" style="display:inline;">Device model</div>
+<br/>
+<input type="checkbox" name="h_s60_version" value=""><div id="fld4" style="display:inline;">Device model</div>
+<br/>
+<input type="checkbox" name="h_imei_hash" value=""><div id="fld8" style="display:inline;word-wrap: break-word;">Device model</div>
+<br/>
+<br/>
+<label>Enter email-id : </label> <input size="50" type="text" name="presence_email" maxlength="256" />
+<br/>
+<br/>
+<div style="text-align:center;">
+<button type="submit">Report Bug</button>
+</form>
+<hr/>
+<div id="presence" style="display: block;font-size: 12px;">
+If entering the details using mobile is cumbersome, then visit http://brahma.flaminghorns.com/bugs.html to report the issue/crash.
+</div> 
+</body>
+</html>

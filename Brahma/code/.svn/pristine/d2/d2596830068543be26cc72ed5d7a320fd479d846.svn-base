@@ -1,0 +1,45 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+<title>Brahma::Help & FAQ's</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>  
+<link rel="stylesheet" type="text/css" href="infostyles.css"/>
+<style type="text/css">
+<!--
+img#manual_image{
+text-align:center;
+}
+-->
+</style>
+
+</head>
+<body>
+
+<!-- common header for all the help pages -->
+<table id="container" style="border-style:solid;">
+<tr id="infoheader">
+<th rowspan="5" style="border-right:2px;border-style:solid;"><img src="brahma_icon.png" alt=""></th>
+<td><h2 style="color:#EA6E18;">Brahma v20.12.1</h2></td>
+</tr>
+<tr id="infocontent" style="text-align:center;"><td>An open-source, multi-featured Symbian^3 native app for taking screenshots with ease.</td></tr>
+<tr id="infocontent"><td><b>email</b> : <a id="help_links" href="mailto:brahma@flaminghorns.com">brahma@flaminghorns.com</a></td></tr>
+<tr id="infocontent"><td><b>www</b> : <a id="help_links" href="http://brahma.flaminghorns.com">http://brahma.flaminghorns.com</a></td></tr>
+<tr id="infocontent"><td><b>twitter</b> : <a id="help_links" href="https://twitter.com/#!/brahma_s60">@brahma_s60</a></td></tr>
+</table>
+
+<div style="text-align:center;">
+<br/>
+<a href="menu.html" class="menu_button">Back to Help Options</a>
+</div>
+<hr/> 
+<div style="display: block;font-size: 12px;font-family:sans-serif;">
+<h4>Application selection screen</h4>
+<p>The application selection screen allows the user to select any of the applications on the device. Currently only native apps can be selected. Midlets & widgets are not selectable and may be supported in future versions.</p>
+<p>The single item of the list has the following details.</p>
+<img id="img_cnt" src="app_list_item_explained.png" alt="Application single item explained">
+<hr/>
+<img id="img_cnt" src="app_list_options_area.png" alt="Applist selection screen option image">
+</div>
+</body>
+</html>

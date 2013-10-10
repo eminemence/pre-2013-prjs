@@ -1,0 +1,36 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+<title>Brahma::App Usage</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>  
+<!-- just to make sure that we have the latest scrshot count -->
+<meta http-equiv="refresh" content="5">
+<link rel="stylesheet" type="text/css" href="infostyles.css"/>
+<script type="text/javascript" src="device_info.js"></script>
+<script type="text/javascript" src="form_load.js"></script>
+</head>
+<body onload="load_usage_data();">
+
+<!-- common header for all the help pages -->
+<table id="container" style="border-style:solid;">
+<tr id="infoheader">
+<th rowspan="5" style="border-right:2px;border-style:solid;"><img src="brahma_icon.png" alt=""></th>
+<td><h2 style="color:#EA6E18;">Brahma v2012.1</h2></td>
+</tr>
+<tr id="infocontent"><td><b>email</b> : <a id="help_links" href="mailto:brahma@flaminghorns.com">brahma@flaminghorns.com</a></td></tr>
+<tr id="infocontent"><td><b>www</b> : <a id="help_links" href="http://brahma.flaminghorns.com">http://brahma.flaminghorns.com</a></td></tr>
+<tr id="infocontent"><td><b>twitter</b> : <a id="help_links" href="https://twitter.com/#!/brahma_s60">@brahma_s60</a></td></tr>
+</table>
+
+<div style="text-align:center;">
+<br/>
+<a href="menu.html" class="menu_button">Back to Help Options</a>
+</div>
+<hr/>
+<div id="app_usage" style="display: block;font-size: 24px; font-style:oblique; color:#E7A555;">
+Brahma has taken <div style="display:inline;" id="scrshot_count"></div> screenshots, since it has been installed.
+</div> 
+<hr/>
+</body>
+</html>

@@ -1,0 +1,86 @@
+/*
+ * Copyright (C) 2011-2012  Mayur Kankanwadi(eminemence@gmail.com)
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ *  any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>
+ */
+
+
+//  LOCALISATION STRINGS
+#define qtn_loc_resource_file_1 "\\resource\\apps\\ScrShotsAutomatic"
+// Caption string for app.
+#define qtn_caption_string "Brahma"
+
+#ifdef ENABLE_DEBUG_UI
+
+#define qtn_watermark_top_left_command "Watermark TopLeft"
+#define qtn_watermark_top_right_command "Watermark TopRight"
+#define qtn_watermark_bottom_left_command "Watermark BottomLeft"
+#define qtn_watermark_bottom_right_command "Watermark BottomRight"
+#define qtn_take_one_scr_shot_command "Take 1 ScrShot[5s]"
+#define qtn_multiple_scr_shot_60_command "Take n ScrShot[60s]"
+#define qtn_start_notes_command "Start Notes till exit"
+#define qtn_save_settings_command "Save Settings"
+#define qtn_about "About"
+#define qtn_exit "Exit"
+#define qtn_about_dialog_title "About"
+#define qtn_about_dialog_text "Brahma Version 1.0.0\n\nAuthor: Mayur Kankanwadi[eminemence@gmail.com]\n\nSupport: eminemence@gmail.com\n\n(c) All rights reserved Mayur Kankanwadi. 2011\r\nRefer to copyright.txt for more details."
+#endif//ENABLE_DEBUG_UI
+
+
+#define STRING_none_value "None."
+#define STRING_exit_prompt_str "Exit Brahma?"
+#define STRING_app_list_screen_caption "Select application."
+#define STRING_folder_list_screen_caption "Select target folder."
+#define STRING_drv_list_screen_caption "Select target drive."
+#define STRING_app_select_format_str "App Selected : %S"
+#define STRING_drive_select_format_str "Drive Selected : %S"
+#define STRING_folder_select_name_format_str "Selected folder: %S"
+#define STRING_folder_current_name_format_str "Current folder: %S"
+#define STRING_folder_name_prompt_str "Enter Folder Name"
+#define STRING_drive_usage_limit_label_str "Disk Usage Limit"
+#define STRING_drive_size_format_str "Size : %d / %d MB/MB"
+#define STRING_drive_list_free_size_cell_format_str "Free IN %S: %ld "
+#define STRING_drive_list_threshold_size_cell_format_str "Fill Limit : %d%%"
+#define STRING_folder_create_ok_msg "Folder created!"
+#define STRING_folder_create_fail_msg "Error creating folder!"
+#define STRING_action_confirm_prompt "Start ScrShots action?"
+#define STRING_drive_total_format_str "Total IN %S : %ld"
+#define STRING_sound_on_profile_msg "Sound cannot be activated in Silent Profile."
+#define STRING_drv_select_label_str "TARGET\nDRIVE"
+#define STRING_folder_select_label_str "TARGET\nFOLDER"
+#define STRING_free_space_str "Free Space : %d"
+#define STRING_threshold_percent_str "Fill Threshold : %d"
+#define STRING_name_series_select_label_str "NAME\nSERIES"
+#define STRING_target_format_select_label_str "TARGET\nFORMAT"
+#define STRING_current_mode_label_str "Mode : %S"
+#define STRING_scr_shots_count_label_str "Screen shots taken : %d"
+#define STRING_app_name_label_str "App selected : %S"
+#define STRING_interval_title_label_str "INTERVAL IN SECS"
+#define STRING_duration_title_label_str "DURATION IN SECS"
+#define STRING_drive_grid_threshold_info_str "Threshold percent is max disk space utilisation limit."
+#define STRING_single_scrshot_mode_str "Single Screenshot."
+#define STRING_multiple_scrshot_mode_str "Multiple Screenshots."
+#define STRING_app_multiple_till_exit_scrshot_mode_str "Multiple Screenshot of App Till Exit."
+#define STRING_app_multiple_for_duration_scrshot_mode_str "Multiple Screenshots of App For Duration."
+#define STRING_folder_permission_denied_msg_str "Cannot access folder. Permission Denied!"
+#define STRING_app_not_seleted_msg_str "Please select an app. before launching the action."
+#define STRING_single_scr_shot_action_str "Start taking single screenshot?"
+#define STRING_multiple_scr_shot_action_str "Start taking multiple screenshots?"
+#define STRING_app_multiple_scr_shot_till_duration_str "Start taking multiple screenshots of app for selected duration?"
+#define STRING_app_multiple_scr_shot_till_exit_str "Start taking multiple screenshots of app till app exit?"
+#define STRING_app_launch_error_msg_str "Error launching app for taking screenshots!"
+
+
+
+
+// End of File
