@@ -1,0 +1,147 @@
+/*
+ * Copyright (C) 2011-2012  Mayur Kankanwadi(eminemence@gmail.com)
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ *  any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>
+ */
+ 
+APP_LAYER_SYSTEMINCLUDE
+
+//application features macros
+MACRO ENABLE_ENGINE
+MACRO ENABLE_SETTINGS
+//MACRO ENABLE_LOGGING //should not make it to release version
+
+//ENABLE_DEBUG_UI & ENABLE_THREE_SCREEN_UI are mutually exclusive macros, at any given time only one can be enabled
+// if both are enabled then NOT GOOD!!
+//MACRO ENABLE_DEBUG_UI
+MACRO ENABLE_THREE_SCREEN_UI
+
+// watermark slated for v2011.2
+//MACRO ENABLE_WATERMARK
+
+MACRO ENABLE_CUSTOM_LISTBOX
+
+//drive list is just a backup in case the drive selection grid does not work out
+//MACRO ENABLE_DRIVE_LIST
+
+//for whirlpool hash algo symbian port
+MACRO WHIRLPOOL_SYMBIAN 
+
+//all debug/logging code should be under this flag : THIS SHOULD NOT GO IN RELEASE BUILD
+//MACRO BRAHMA_DEBUG
+
+
+TARGET			ScrShotsAutomatic.exe
+TARGETTYPE		exe
+UID		  0x100039CE 0x2006508E
+
+//memory set to fix the CImageEncoder::convert KErrNoMemory error.
+//may need to be adjusted if above error resurfaces
+EPOCHEAPSIZE  0x100000 0x200000
+
+SYSTEMINCLUDE \epoc32\include\stdapis
+
+SOURCEPATH		..\src
+SOURCE			ScrShotsAutomatic.cpp
+SOURCE			ScrShotsAutomaticApplication.cpp
+SOURCE			ScrShotsAutomaticAppView.cpp
+SOURCE			ScrShotsAutomaticAppUi.cpp
+SOURCE			ScrShotsAutomaticDocument.cpp
+SOURCE 			ScrShotsSystemEventObserver.cpp 
+SOURCE 			ScrShotsConvertor.cpp 
+SOURCE 			ScrShotsProducer.cpp 
+SOURCE 			ScrShotsSettings.cpp
+SOURCE 			TimerX.cpp 
+SOURCE 			ScrShotsGenUtils.cpp
+SOURCE 			EventLogger.cpp //not for release edition
+SOURCE 			ScrShotsAppFileList.cpp 
+SOURCE 			ScrShotsInfoScreen.cpp 
+SOURCE 			ScrShotsMainControl.cpp 
+SOURCE 			ScrShotsGradientBitmapTool.cpp
+SOURCE 			ScrShotsButtonFeedback.cpp
+//SOURCE 			ScrShotsWatermarkConfig.cpp
+SOURCE 			ScrShotsCustomList.cpp
+SOURCE 			ScrShotsDeviceWatcher.cpp
+SOURCE 			ScrShotsNumberEditControl.cpp
+//SOURCE 			ScrShotsSliderControl.cpp
+SOURCE 			ScrShotsVectorImgLoader.cpp 
+SOURCE 			ScrShotsStrLoader.cpp 
+SOURCE 			ScrShotsDriveGrid.cpp
+SOURCE 			ScrShotsTextLabel.cpp
+SOURCE 			ScrShotsStringPool.cpp
+SOURCE 			Whirlpool.c
+
+SOURCEPATH		..\data
+
+START RESOURCE	ScrShotsAutomatic.rss
+HEADER
+TARGET ScrShotsAutomatic
+TARGETPATH resource\apps
+END //RESOURCE
+
+START RESOURCE	ScrShotsAutomatic_reg.rss
+TARGET ScrShotsAutomatic_reg
+TARGETPATH 	  \private\10003a3f\apps
+END //RESOURCE
+
+USERINCLUDE	   ..\inc
+
+
+LIBRARY		   euser.lib
+LIBRARY		   apparc.lib
+LIBRARY		   cone.lib
+LIBRARY		   eikcore.lib
+LIBRARY		   avkon.lib
+LIBRARY		   commonengine.lib
+LIBRARY		   efsrv.lib 
+LIBRARY		   estor.lib
+LIBRARY        aknnotify.lib
+LIBRARY        imageconversion.lib
+LIBRARY        bafl.lib
+LIBRARY        edbms.lib
+LIBRARY        ws32.lib
+LIBRARY        fbscli.lib
+LIBRARY  		apgrfx.lib
+LIBRARY  		flogger.lib//not for release builds
+LIBRARY  		eikcoctl.lib
+LIBRARY  		egul.lib
+LIBRARY        aknicon.lib 
+LIBRARY 		BrowserEngine.lib
+LIBRARY 		bitgdi.lib
+LIBRARY 		gdi.lib
+LIBRARY 		eikctl.lib
+//LIBRARY 		HWRMVibraClient.lib
+LIBRARY 		hwrmlightclient.lib
+LIBRARY 		touchfeedback.lib
+LIBRARY 		ProfileEngine.lib
+LIBRARY 		mediaclientaudio.lib
+//LIBRARY			CommonDialogs.lib
+LIBRARY			fntstr.lib
+LIBRARY			sysutil.lib
+LIBRARY			hal.lib 
+LIBRARY			etel3rdparty.lib
+LIBRARY			platformver.lib
+LIBRARY			eiksrv.lib
+
+
+LANG SC
+
+VENDORID	  	  0
+SECUREID		  0x2006508E
+//for screen capture
+CAPABILITY  UserEnvironment ReadDeviceData NetworkServices// need to find for whom the cap was added!!!   
+
+DEBUGGABLE_UDEBONLY
+// End of File
+SOURCEPATH ..\src
+SOURCE ScrShotsFolderQueryDlg.cpp

@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+<title>Brahma::Rate the app</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>  
+<link rel="stylesheet" type="text/css" href="infostyles.css"/>
+</head>
+<body>
+<!-- common header for all the help pages -->
+<table id="container" style="border-style:solid;">
+<tr id="infoheader">
+<th rowspan="5" style="border-right:2px;border-style:solid;"><img src="brahma_icon.png" alt=""></th>
+<td><h2 style="color:#EA6E18;">Brahma v2012.1</h2></td>
+</tr>
+<tr id="infocontent"><td><b>email</b> : <a id="help_links" href="mailto:brahma@flaminghorns.com">brahma@flaminghorns.com</a></td></tr>
+<tr id="infocontent"><td><b>www</b> : <a id="help_links" href="http://brahma.flaminghorns.com">http://brahma.flaminghorns.com</a></td></tr>
+<tr id="infocontent"><td><b>twitter</b> : <a id="help_links" href="https://twitter.com/#!/brahma_s60">@brahma_s60</a></td></tr>
+</table>
+
+<div style="text-align:center;">
+<br/>
+<a href="menu.html" class="menu_button">Back to Help Options</a>
+</div>
+<hr/>
+<span id="infocontent">Log Presence</span>
+<div id="rating_info" style="display: block;font-size: 12px;">
+Let us know what you feel about the app. The ratings can be submitted anonymously or with the IMEI hash/email id. <i>Neither the IMEI hash nor the email are publicly listed.</i>
+</div> 
+<hr/>
+<form action="" name="app_rating" method="post"  style="font-size: 12px;"  onsubmit="validate_ratings_details();">
+<br/>
+<label>Enter name/alias : </label> <input type="text" name="username" size="50" maxlength="128"/>
+<br/>
+<br/>
+<div>How much do you rate Brahma?</div>
+<input type="radio" name="star1" value="star1"/>
+<img src="star-gold16.png" alt=""> 
+: <div style="display:inline;">This app sucks.</div>
+<br/>
+<input type="radio" name="star2" value="star2"/>
+<img src="star-gold16.png" alt=""><img src="star-gold16.png" alt=""> 
+: <div style="display:inline;">The app idea is noble but lacking in execution.</div>
+<br/>
+<input type="radio" name="star3" value="star3"/>
+<img src="star-gold16.png" alt=""><img src="star-gold16.png" alt=""><img src="star-gold16.png" alt="">  
+: <div style="display:inline;"> No feelings, just works for me.</div>
+<br/>
+<input type="radio" name="star4" value="star4"/>
+<img src="star-gold16.png" alt=""><img src="star-gold16.png" alt=""><img src="star-gold16.png" alt=""><img src="star-gold16.png" alt="">   
+: <div style="display:inline;">This is a good app, needs more features.</div>
+<br/>
+<input type="radio" name="star5" value="star5"/>
+<img src="star-gold16.png" alt=""><img src="star-gold16.png" alt=""><img src="star-gold16.png" alt=""><img src="star-gold16.png" alt=""><img src="star-gold16.png" alt="">  
+: <div style="display:inline;">Good idea & execution.</div>
+<br/>
+<input type="radio" name="star6" value="star6"/>
+<img src="star-gold16.png" alt=""><img src="star-gold16.png" alt=""><img src="star-gold16.png" alt=""><img src="star-gold16.png" alt=""><img src="star-gold16.png" alt=""><img src="star-gold16.png" alt="">
+: <div style="display:inline;">This app is awesome. App of the year.</div>
+<br/>
+<br/>
+<label>Enter email-id : </label> <input size="50" type="text" name="presence_email" maxlength="256" />
+<div style="text-align:center;">
+<button type="submit">Submit Rating</button>
+</form>
+</body>
+</html>

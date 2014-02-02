@@ -1,0 +1,358 @@
+/*
+ * Copyright (C) 2011-2012  Mayur Kankanwadi(eminemence@gmail.com)
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ *  any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>
+ */
+
+//  RESOURCE IDENTIFIER
+NAME SCRS	// 4 letter ID
+
+
+//  INCLUDES
+#include <eikon.rh>
+#include <avkon.rsg>
+#include <avkon.rh>
+#include <appinfo.rh>
+#include "ScrShotsAutomatic.hrh"
+#include "ScrShotsAutomatic.rls"
+#include <CommonDialogs.hrh> // Enumerations
+#include <CommonDialogs.rh> // Resource structures
+
+//  RESOURCE DEFINITIONS
+// -----------------------------------------------------------------------------
+//
+//	Define the resource file signature
+//	This resource should be empty.
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE RSS_SIGNATURE
+	{
+	}
+
+// -----------------------------------------------------------------------------
+//
+//	Default Document Name
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE TBUF r_default_document_name
+	{
+	buf="SCRS";
+	}
+
+// -----------------------------------------------------------------------------
+//
+//	Define default menu and CBA key.
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE EIK_APP_INFO
+	{
+#ifdef ENABLE_DEBUG_UI
+	menubar = r_menubar;
+	cba = R_AVKON_SOFTKEYS_OPTIONS_EXIT;
+#endif //ENABLE_DEBUG_UI
+	}
+
+
+// -----------------------------------------------------------------------------
+//
+//   r_menubar
+//   Main menubar
+//
+// -----------------------------------------------------------------------------
+//
+#ifdef ENABLE_DEBUG_UI
+RESOURCE MENU_BAR r_menubar
+	{
+	titles =
+		{
+		MENU_TITLE { menu_pane = r_menu; }
+		};
+	}
+#endif//ENABLE_DEBUG_UI
+
+// -----------------------------------------------------------------------------
+//
+//   r_menu
+//   Menu for "Options"
+//
+// -----------------------------------------------------------------------------
+//
+#ifdef ENABLE_DEBUG_UI
+RESOURCE MENU_PANE r_menu
+	{
+	items =
+		{
+		// added the new Options menu command here
+        MENU_ITEM
+                {
+                command = EWatermarkTopLeftCommand;
+                txt = qtn_watermark_top_left_command;
+                },
+        MENU_ITEM
+                {
+                command = EWatermarkTopRightCommand;
+                txt = qtn_watermark_top_right_command;
+                },
+        MENU_ITEM
+                {
+                command = EWatermarkBottomLeftCommand;
+                txt = qtn_watermark_bottom_left_command;
+                },		        
+        MENU_ITEM
+                {
+                command = EWatermarkBottomRightCommand;
+                txt = qtn_watermark_bottom_right_command;
+                },
+                
+		MENU_ITEM
+				{
+				command = ETakeOneScrShotCommand;
+				txt = qtn_take_one_scr_shot_command;
+				},
+		MENU_ITEM
+				{
+				command = EMultipleScrShotsFor60sCommand;
+				txt = qtn_multiple_scr_shot_60_command;
+				},
+		MENU_ITEM
+				{
+				command = EStartNotesAppTillExit;
+				txt = qtn_start_notes_command;
+				},
+        MENU_ITEM
+                {
+                command = ESaveSettingsCommand;
+                txt = qtn_save_settings_command;
+                },
+				
+				
+		MENU_ITEM
+				{
+				command = EAbout;
+				txt = qtn_about;
+				},
+		MENU_ITEM
+				{
+				command = EAknSoftkeyExit;
+				txt = qtn_exit;
+				}
+		};
+	}
+#endif//ENABLE_DEBUG_UI
+// -----------------------------------------------------------------------------
+//
+// About dialog resource.
+//
+// -----------------------------------------------------------------------------
+//
+#ifdef ENABLE_DEBUG_UI
+RESOURCE DIALOG r_about_query_dialog
+	{
+	flags = EGeneralQueryFlags | EEikDialogFlagNoBorder | EEikDialogFlagNoShadow;
+	buttons = R_AVKON_SOFTKEYS_OK_EMPTY;
+	items=
+		{
+		DLG_LINE 
+			{
+			type = EAknCtPopupHeadingPane;
+			id = EAknMessageQueryHeaderId;
+			itemflags = EEikDlgItemNonFocusing;
+			control = AVKON_HEADING
+				{
+				};
+			},
+		DLG_LINE
+			{
+			type = EAknCtMessageQuery;
+			id = EAknMessageQueryContentId;
+			control = AVKON_MESSAGE_QUERY
+				{
+				};
+			}
+		};
+	}
+#endif//ENABLE_DEBUG_UI
+
+// -----------------------------------------------------------------------------
+//
+// Resources for messages.
+//
+// -----------------------------------------------------------------------------
+//
+#ifdef ENABLE_DEBUG_UI
+RESOURCE TBUF32 r_caption_string { buf=qtn_caption_string; }
+RESOURCE TBUF32 r_about_dialog_title { buf=qtn_about_dialog_title; }
+RESOURCE TBUF r_about_dialog_text { buf=qtn_about_dialog_text; }
+RESOURCE TBUF r_command1_text { buf=qtn_command1_text; }
+#endif //ENABLE_DEBUG_UI
+
+// ---------------------------------------------------------------------------- 
+//
+// r_localisable_app_info
+//
+// ---------------------------------------------------------------------------- 
+//
+RESOURCE LOCALISABLE_APP_INFO r_localisable_app_info
+	{
+	short_caption = "Brahma";
+	caption_and_icon = 
+	CAPTION_AND_ICON_INFO
+		{
+		caption = "Brahma";
+
+		number_of_icons = 1;
+		icon_file = "\\resource\\apps\\ScrShotsAutomatic.mif";
+		};
+	}
+
+// -----------------------------------------------------------------------------
+//
+// r_listbox_single_number_style
+//
+// -----------------------------------------------------------------------------
+// 
+RESOURCE LISTBOX r_listbox_single_number_style
+    {
+    flags = EAknListBoxSelectionList;
+    array_id = r_single_number_style_items;    
+    }
+
+// -----------------------------------------------------------------------------
+//
+// r_single_number_style_items
+//
+// -----------------------------------------------------------------------------
+// 
+RESOURCE ARRAY r_single_number_style_items
+    {
+    items =
+        {
+        LBUF
+            {
+            txt = STRING_r_listbox_ns1;
+            },
+        LBUF
+            {
+            txt = STRING_r_listbox_ns2;
+            },
+        LBUF
+            {
+            txt = STRING_r_listbox_ns3;
+            },
+        LBUF
+            {
+            txt = STRING_r_listbox_ns4;
+            }
+        };
+    }
+
+RESOURCE TBUF32 r_listbox_itemtext { buf=STRING_r_listbox_ns1; }
+RESOURCE TBUF32 r_listbox_emptytext { buf=STRING_r_listbox_emptytext; }
+
+RESOURCE EDWIN r_name_watermark_edit
+{
+    maxlength = 12;
+    default_case = EAknEditorTextCase;
+    allowed_case_modes = EAknEditorAllCaseModes;
+    numeric_keymap = EAknEditorStandardNumberModeKeymap;
+    default_input_mode = EAknEditorTextInputMode;
+    allowed_input_modes = EAknEditorTextInputMode | EAknEditorNumericInputMode | EAknEditorSecretAlphaInputMode | EAknEditorKatakanaInputMode 
+            | EAknEditorFullWidthTextInputMode | EAknEditorFullWidthNumericInputMode | EAknEditorFullWidthKatakanaInputMode | EAknEditorHiraganaKanjiInputMode ;
+    special_character_table = R_AVKON_SPECIAL_CHARACTER_TABLE_DIALOG;
+    //max_view_height_in_lines = 1; 
+    lines = 2;
+}
+
+//RESOURCE FILENAMEPROMPTDIALOG r_new_folder_dialog
+//{
+//    filename_prompt = "Enter Folder Name";
+//    default_filename = "SSF";
+//}
+
+RESOURCE DIALOG r_new_folder_dialog
+{
+    flags = EGeneralQueryFlags;
+    buttons = R_AVKON_SOFTKEYS_OK_CANCEL;
+    items=
+        {
+        DLG_LINE
+            {
+            type = EAknCtQuery;
+            id = EGeneralQuery;
+            control= AVKON_DATA_QUERY 
+                { 
+                layout = EDataLayout;
+                control = EDWIN
+                    { 
+                    default_case = EAknEditorTextInputMode | EAknEditorNumericInputMode;
+                    flags= EEikEdwinNoHorizScrolling | EEikEdwinResizable; 
+                    maxlength = 250; 
+                    width = 4; 
+                    lines = 1; 
+                    //special_character_table = R_AVKON_EMAIL_ADDR_SPECIAL_CHARACTER_TABLE_DIALOG;
+                    };
+                };
+            }
+        };
+}
+
+
+//---- string delcaration starts from here -----
+RESOURCE TBUF r_str_none { buf = STRING_none_value; }
+RESOURCE TBUF r_str_exit_prompt { buf = STRING_exit_prompt_str; }
+RESOURCE TBUF r_str_app_list_caption { buf = STRING_app_list_screen_caption; }
+RESOURCE TBUF r_str_folder_list_caption { buf = STRING_folder_list_screen_caption; }
+RESOURCE TBUF r_str_drive_list_caption { buf = STRING_drv_list_screen_caption; }
+RESOURCE TBUF r_str_app_select_format { buf = STRING_app_select_format_str; }
+RESOURCE TBUF r_str_drive_select_format { buf = STRING_drive_select_format_str; }
+RESOURCE TBUF r_str_folder_select_name_format { buf = STRING_folder_select_name_format_str; }
+RESOURCE TBUF r_str_folder_current_name_format { buf = STRING_folder_current_name_format_str; }
+RESOURCE TBUF r_str_folder_name_prompt { buf = STRING_folder_name_prompt_str; }
+RESOURCE TBUF r_str_drive_usage_limit { buf = STRING_drive_usage_limit_label_str; }
+RESOURCE TBUF r_str_drive_size_format { buf = STRING_drive_size_format_str; }
+RESOURCE TBUF r_str_drive_list_free_size_cell_format { buf = STRING_drive_list_free_size_cell_format_str; }
+RESOURCE TBUF r_str_drive_list_threshold_size_cell_format { buf = STRING_drive_list_threshold_size_cell_format_str; }
+RESOURCE TBUF r_str_folder_create_ok_msg { buf = STRING_folder_create_ok_msg; }
+RESOURCE TBUF r_str_folder_create_fail_msg { buf = STRING_folder_create_fail_msg; }
+RESOURCE TBUF r_str_action_confirm_prompt { buf = STRING_action_confirm_prompt; }
+RESOURCE TBUF r_str_drive_total_format_str { buf = STRING_drive_total_format_str;}
+RESOURCE TBUF r_str_sound_on_profile_str { buf = STRING_sound_on_profile_msg;}
+RESOURCE TBUF r_str_drv_select_label_str { buf = STRING_drv_select_label_str;}
+RESOURCE TBUF r_str_folder_select_label_str { buf = STRING_folder_select_label_str; }
+RESOURCE TBUF r_str_free_space_str { buf = STRING_free_space_str; }
+RESOURCE TBUF r_str_threshold_percent_str { buf = STRING_threshold_percent_str; }
+RESOURCE TBUF r_str_name_series_select_label_str { buf = STRING_name_series_select_label_str; }
+RESOURCE TBUF r_str_target_format_select_label_str { buf = STRING_target_format_select_label_str; }
+RESOURCE TBUF r_str_current_mode_label_str { buf = STRING_current_mode_label_str; }
+
+RESOURCE TBUF r_str_scr_shots_count_label_str { buf = STRING_scr_shots_count_label_str; }
+RESOURCE TBUF r_str_app_name_label_str { buf = STRING_app_name_label_str; }
+RESOURCE TBUF r_str_interval_title_label_str { buf = STRING_interval_title_label_str; }
+RESOURCE TBUF r_str_duration_title_label_str { buf = STRING_duration_title_label_str; }
+RESOURCE TBUF r_str_drive_grid_threshold_info_str { buf = STRING_drive_grid_threshold_info_str; }
+
+RESOURCE TBUF r_str_single_scrshot_mode_str { buf = STRING_single_scrshot_mode_str; }
+RESOURCE TBUF r_str_multiple_scrshot_mode_str { buf = STRING_multiple_scrshot_mode_str; }
+RESOURCE TBUF r_str_app_scrshot_till_exit_mode_str { buf = STRING_app_multiple_till_exit_scrshot_mode_str; }
+RESOURCE TBUF r_str_app_scrshot_for_duration_mode_str { buf = STRING_app_multiple_for_duration_scrshot_mode_str; }
+RESOURCE TBUF r_str_folder_permission_denined_str { buf = STRING_folder_permission_denied_msg_str; }
+RESOURCE TBUF r_str_app_not_selected_msg_str { buf = STRING_app_not_seleted_msg_str; }
+RESOURCE TBUF r_str_single_scr_shot_action_str { buf = STRING_single_scr_shot_action_str; }
+RESOURCE TBUF r_str_multiple_scr_shot_action_str { buf = STRING_multiple_scr_shot_action_str; }
+RESOURCE TBUF r_app_multiple_scr_shot_till_duration_str { buf = STRING_app_multiple_scr_shot_till_duration_str; }
+RESOURCE TBUF r_str_app_multiple_scr_shot_till_exit_str { buf = STRING_app_multiple_scr_shot_till_exit_str; }
+RESOURCE TBUF r_str_app_launch_error_msg_str { buf = STRING_app_launch_error_msg_str; }
+// End of File

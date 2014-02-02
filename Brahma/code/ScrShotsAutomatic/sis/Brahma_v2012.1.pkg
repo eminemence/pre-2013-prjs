@@ -1,0 +1,105 @@
+ ;
+ ; Copyright (C) 2011-2012  Mayur Kankanwadi(eminemence@gmail.com)
+ ; This program is free software: you can redistribute it and/or modify
+ ; it under the terms of the GNU General Public License as published by
+ ; the Free Software Foundation, either version 3 of the License, or
+ ;  any later version.
+ ; 
+ ; This program is distributed in the hope that it will be useful,
+ ; but WITHOUT ANY WARRANTY; without even the implied warranty of
+ ; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ ; GNU General Public License for more details.
+ ; 
+ ; You should have received a copy of the GNU General Public License
+ ; along with this program.  If not, see <http://www.gnu.org/licenses/>
+ ;
+ 
+; Installation file for ScrShotsAutomatic application
+;
+; This is an auto-generated PKG file by Carbide.
+; This file uses variables specific to Carbide builds that will not work
+; on command-line builds. If you want to use this generated PKG file from the
+; command-line tools you will need to modify the variables with the appropriate
+; values: $(EPOCROOT), $(PLATFORM), $(TARGET)
+;
+;Language - standard language definitions
+&EN
+
+; standard SIS file header
+#{"Brahma v20.12.1"},(0x2006508E),20,12,1
+
+;Localised Vendor name
+%{"flaminghorns.com"}
+
+;Unique Vendor name
+:"flaminghorns.com"
+
+;Supports Series 60 v 5.0
+[0x20022e6d], 0, 0, 0, {"Series60ProductID"}
+
+; show the license information.
+"..\docs\ScrShotsAutomaticLicense.txt"-"", FT
+
+;Files to install
+;You should change the source paths to match that of your environment
+;<source> <destination>
+"$(EPOCROOT)epoc32\release\$(PLATFORM)\$(TARGET)\ScrShotsAutomatic.exe"		-"!:\sys\bin\ScrShotsAutomatic.exe"
+"$(EPOCROOT)epoc32\data\z\resource\apps\scrshotsautomatic.rsc"		-"!:\resource\apps\ScrShotsAutomatic.rsc"
+"$(EPOCROOT)epoc32\data\z\private\10003a3f\apps\scrshotsautomatic_reg.rsc"	-"!:\private\10003a3f\import\apps\ScrShotsAutomatic_reg.rsc"
+"$(EPOCROOT)epoc32\data\z\resource\apps\scrshotsautomatic.mif" -"!:\resource\apps\ScrShotsAutomatic.mif"
+"$(EPOCROOT)epoc32\data\z\private\2006508E\ScrShotsScreenIcons.mif" -"!:\private\2006508E\ScrShotsScreenIcons.mif"
+;Following two files generated at run time.But as FILENULL is deprecated from 9.x so not required anymore
+;"" -"c:\Private\2006508E\ScrShotsSettings.db",FILENULL
+;"" -"c:\Private\2006508E\device_info.js",FILENULL
+;static info page related files
+"..\data\about.html"		-"c:\private\2006508E\about.html"
+"..\data\man_page.html"		-"c:\private\2006508E\man_page.html"
+"..\data\infostyles.css"	-"c:\private\2006508E\infostyles.css"
+"..\data\menu.html"			-"c:\private\2006508E\menu.html"
+;"..\data\presence.html"		-"c:\private\2006508E\presence.html"
+"..\data\credit.html"		-"c:\private\2006508E\credit.html"
+"..\data\faq.html"			-"c:\private\2006508E\faq.html"
+;"..\data\app_usage.html"	-"c:\private\2006508E\app_usage.html"
+;"..\data\idea.html"			-"c:\private\2006508E\idea.html"
+;"..\data\presence.html"		-"c:\private\2006508E\presence.html"
+;"..\data\rate.html"			-"c:\private\2006508E\rate.html"
+;"..\data\bug.html"			-"c:\private\2006508E\bug.html"
+"..\data\manual.html"		-"c:\private\2006508E\manual.html"
+"..\data\app_tips.html"		-"c:\private\2006508E\app_tips.html"
+"..\data\drive_tips.html"		-"c:\private\2006508E\drive_tips.html"
+"..\data\folder_tips.html"		-"c:\private\2006508E\folder_tips.html"
+"..\data\help_tips.html"		-"c:\private\2006508E\help_tips.html"
+"..\data\main_tips.html"		-"c:\private\2006508E\main_tips.html"
+"..\data\form_load.js"		-"c:\private\2006508E\form_load.js"
+"..\data\brahma_icon.png"	-"c:\private\2006508E\brahma_icon.png"
+"..\data\star-gold16.png"	-"c:\private\2006508E\star-gold16.png"
+"..\data\drive_info.png"	-"c:\private\2006508E\drive_info.png"
+"..\data\file_format.png"	-"c:\private\2006508E\file_format.png"
+"..\data\file_name_info.png"	-"c:\private\2006508E\file_name_info.png"
+"..\data\folder_info.png"	-"c:\private\2006508E\folder_info.png"
+"..\data\folder_selection_option.png"	-"c:\private\2006508E\folder_selection_option.png"
+"..\data\number_edit_ctrl.png"	-"c:\private\2006508E\number_edit_ctrl.png"
+"..\data\options_area.png"	-"c:\private\2006508E\options_area.png"
+"..\data\stop_action.png"	-"c:\private\2006508E\stop_action.png"
+"..\data\actions_explained.png"	-"c:\private\2006508E\actions_explained.png"
+"..\data\app_list_options_area.png"	-"c:\private\2006508E\app_list_options_area.png"
+"..\data\app_list_item_explained.png"	-"c:\private\2006508E\app_list_item_explained.png"
+"..\data\drive_grid_item_explained.png"	-"c:\private\2006508E\drive_grid_item_explained.png"
+"..\data\drive_grid_options_area.png"	-"c:\private\2006508E\drive_grid_options_area.png"
+"..\data\folder_list_item_explained.png"	-"c:\private\2006508E\folder_list_item_explained.png"
+"..\data\folder_selection_screen_options_area.png"	-"c:\private\2006508E\folder_selection_screen_options_area.png"
+
+;sound file 
+"..\sounds\tick.wav"		-"c:\private\2006508E\tick.wav"
+
+; add font file here
+;"..\font\octin_stencil_free.gdr" 	-"C:\scrshotfonts\octin_stencil_free.gdr"
+"..\font\octin_stencil_free.gdr" 	-"C:\system\apps\brahma\octin_stencil_free.gdr"
+
+
+;required for application to be covered by backup/restore facility 
+;"..\sis\backup_registration.xml"		-"!:\private\2006508E\backup_registration.xml"
+
+;just for debug purpose
+;REMOVE FROM FINAL INSTALLATION
+"ErrRd"		-"C:\resource\ErrRd"

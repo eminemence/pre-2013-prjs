@@ -1,0 +1,23 @@
+ScrShotsAutomatic
+-----------------
+The automatic screenshot taking tool.
+
+Features
+--------
+Takes screenshots one time after predefined interval or an event.
+Predefined interval.
+One scr shot after a predefined interval
+Multiple scr shots for a predefined interval.
+
+Events
+- On a call
+- On launching an app till the app exits.
+
+Provide option for
+file save location
+image format. - all formats as supported by Symbian^3
+
+Source code hosted on sourceforge.net
+
+pricing on ovi store
+.314 dollars = 14 rupees

@@ -1,0 +1,4 @@
+Brahma v2012.1 is licensed under GPLv3. The complete license can be seen online on http://www.gnu.org/licenses/gpl-3.0.html.
+As a buyer of this program, you are entitled to get a copy of the source code for free.
+Please log presence with your e-mail address and the source package will be mailed to you immediately.
+Also if you do not want to log your presence, just send a e-mail to brahma@flaminghorns.com with a request to get the source code copy.
