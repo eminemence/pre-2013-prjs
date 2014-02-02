@@ -1,0 +1,67 @@
+/*
+ * Copyright (C) 2011  Mayur Kankanwadi(eminemence@gmail.com)
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ *  any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>
+ */
+ 
+APP_LAYER_SYSTEMINCLUDE
+
+TARGET			S60Uptime_0xA0011832.exe
+TARGETTYPE		exe
+UID		  0x100039CE 0xA0011832
+
+SOURCEPATH		..\src
+SOURCE			S60Uptime.cpp
+SOURCE			S60UptimeApplication.cpp
+SOURCE			S60UptimeAppView.cpp
+SOURCE			S60UptimeAppUi.cpp
+SOURCE			S60UptimeDocument.cpp
+SOURCE 			TimerX.cpp
+
+SOURCEPATH		..\data
+
+START RESOURCE	S60Uptime.rss
+HEADER
+TARGET S60Uptime_0xA0011832
+TARGETPATH resource\apps
+END //RESOURCE
+
+START RESOURCE	S60Uptime_reg.rss
+TARGET S60Uptime_0xA0011832_reg
+TARGETPATH 	  \private\10003a3f\apps
+END //RESOURCE
+
+SYSTEMINCLUDE	   \epoc32\include
+
+USERINCLUDE	   ..\inc
+
+LIBRARY		   euser.lib
+LIBRARY		   apparc.lib
+LIBRARY		   cone.lib
+LIBRARY		   eikcore.lib
+LIBRARY		   avkon.lib
+LIBRARY        aknnotify.lib
+LIBRARY        gdi.lib
+LIBRARY        eikcoctl.lib
+
+
+LANG SC
+
+VENDORID	  	  0
+SECUREID		  0xA0011832
+CAPABILITY	  	  NONE
+
+//DEBUGGABLE_UDEBONLY
+// End of File
+
+
