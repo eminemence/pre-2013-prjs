@@ -1,0 +1,41 @@
+TARGET            SMSManager.app
+TARGETTYPE        app
+
+// change the second number here ot change the UID for this application
+UID               0x100039CE 0x10005b65
+TARGETPATH        \system\apps\SMSManager
+
+SOURCEPATH        ..\src
+SOURCE            SMSManager.cpp
+SOURCE            SMSManagerApplication.cpp 
+SOURCE            SMSManagerAppView.cpp
+SOURCE            SMSManagerAppUi.cpp
+SOURCE            SMSManagerDocument.cpp 
+SOURCE            SMSEntry.cpp 
+SOURCE            SmsOps.cpp 
+
+
+SOURCEPATH        ..\group
+RESOURCE          SMSManager.rss
+RESOURCE          SMSManager_caption.rss
+
+USERINCLUDE       ..\inc 
+
+SYSTEMINCLUDE     \epoc32\include
+
+LIBRARY           euser.lib
+LIBRARY           apparc.lib
+LIBRARY           cone.lib 
+LIBRARY           eikcore.lib  
+LIBRARY           avkon.lib 
+LIBRARY           commonengine.lib
+LIBRARY           msgs.lib
+LIBRARY           eikcoctl.lib
+LIBRARY           eikctl.lib
+LIBRARY           bafl.lib
+LIBRARY           efsrv.lib
+LIBRARY           ezlib.lib
+LIBRARY           gsmu.lib
+LIBRARY           hal.lib
+
+AIF smsmanager.aif ..\aif smsmanageraif.rss c24 logo.bmp logo_mask.bmp

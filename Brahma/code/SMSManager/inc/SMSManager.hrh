@@ -1,0 +1,31 @@
+#ifndef __SMSManager_HRH__
+#define __SMSManager_HRH__
+
+/** SMSManager enumerate command codes */
+enum TSMSManagerIds
+    {
+		ESMSManagerRefreshListCmd = 2000,  
+ 		ESMSManagerMmcSMSListCmd,
+		ESMSManagerMemSMSListCmd,
+		ESMSManagerMmcViewSMSCmd,
+		ESMSManagerMmcDeleteEntryCmd,
+		ESMSManagerMmcCompSMSCmd ,
+		ESMSManagerMmcDeCompSMSCmd,
+		ESMSManagerMemMove2MMCCmd,
+		ESMSManagerMemViewDetailsCmd,
+		ESMSManagerMemViewSMSCmd,
+		ESMSManagerMemCompSMSCmd,
+		ESMSManagerMemDeleteEntryCmd,
+		ESMSManagerMMCSMSListCmd,
+		ESMSCompressCmd,
+		ESMSManagerMemExport2TxtCmd,
+		ESMSManagerMemSave2MemCmd
+    };
+
+enum TSmsMgrControlIds
+{
+	    ESmsMgrBlankNoteId = 1,
+	    ESmsMgrDeleteSmsQueryId
+};
+
+#endif // __SMSManager_HRH__

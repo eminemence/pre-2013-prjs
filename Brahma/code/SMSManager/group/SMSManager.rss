@@ -1,0 +1,221 @@
+
+NAME SMSM
+
+/*#include <eikon.rh>
+#include <eikon.rsg>
+#include <avkon.hrh>
+#include <avkon.rh>
+
+#include <avkon.rsg>*/
+#include <eikon.rh>
+#include <avkon.rsg>
+#include <avkon.rh>
+
+
+#include <uikon.hrh>
+
+
+#include "SMSManager.hrh"
+
+
+// ---------------------------------------------------------
+//   
+//    Define the resource file signature 
+//    This resource should be empty.
+//
+// ---------------------------------------------------------
+//
+RESOURCE RSS_SIGNATURE { }
+
+// ---------------------------------------------------------
+//   
+//    Default Document Name
+//
+// ---------------------------------------------------------
+//
+RESOURCE TBUF r_default_document_name { buf=""; }
+
+// ---------------------------------------------------------
+//   
+//    Define default menu and CBA key.
+//
+// ---------------------------------------------------------
+//
+RESOURCE EIK_APP_INFO
+    {
+    menubar = r_SMSManager_menubar;
+    cba = R_AVKON_SOFTKEYS_OPTIONS_EXIT;
+    }
+
+
+// ---------------------------------------------------------
+//   
+//   r_SMSManager_menubar
+//   Menubar for SMSManager example
+//
+// ---------------------------------------------------------
+//
+RESOURCE MENU_BAR r_SMSManager_menubar
+    {
+    titles =
+        {
+        MENU_TITLE {menu_pane = r_SMSManager_menu;}
+        };
+    }
+
+
+// ---------------------------------------------------------
+//   
+//   r_SMSManager_menu
+//   Menu for "Options"
+//
+// ---------------------------------------------------------
+//
+RESOURCE MENU_PANE r_SMSManager_menu
+    {
+    items = 
+        {
+        // added the new Options menu command here
+        MENU_ITEM 
+		    {
+			command = ESMSManagerMemSMSListCmd; 		
+			txt = "Options..";
+	        cascade = r_smsmgr_mem_options_sub_menu;
+		    flags = EEikMenuItemSeparatorAfter; 	        
+			},
+			
+        MENU_ITEM 
+		    {
+			command = ESMSManagerMemDeleteEntryCmd;  
+		    txt = "Delete Selected SMS";
+			},
+        MENU_ITEM 
+		    {
+			command = EAknSoftkeyExit;   
+			txt = "Exit";
+			}
+        };
+    }
+    
+    
+
+RESOURCE MENU_PANE r_smsmgr_mem_options_sub_menu
+{
+    items = 
+        {
+        MENU_ITEM 
+		    {
+			command = ESMSManagerMemMove2MMCCmd;  
+		    txt = "Save in E:\\Sms";
+			},
+        MENU_ITEM 
+		    {
+			command = ESMSManagerMemSave2MemCmd;  
+		    txt = "Save in C:\\Sms";
+			},
+        MENU_ITEM 
+		    {
+			command = ESMSManagerMemViewDetailsCmd;  
+		    txt = "View Details";
+			},
+        MENU_ITEM 
+		    {
+			command = ESMSManagerMemViewSMSCmd;  
+		    txt = "View SMS";
+			}
+		};
+}    
+
+RESOURCE TBUF r_sms_text 
+{ 
+	buf = "%S"; 
+}
+
+
+RESOURCE TBUF r_sms_details_text 
+{ 
+	buf = "Sender:%S\nDate:%S\nSize:%d\nAttachment:%S\nUnread:%S\nNew:%S\nRecipients:%S\nPriority:%S\nRead-only:%S\n"; 
+}
+
+
+
+RESOURCE TBUF r_about_title 
+{ 
+	buf = "-=[SMS Text]=-"; 
+}
+
+RESOURCE TBUF r_about_sms 
+{ 
+	buf = "-=[SMS Details]=-"; 
+}
+
+
+    
+ 
+RESOURCE DIALOG r_message_query_task
+{
+	flags = EGeneralQueryFlags | EEikDialogFlagNoBorder | EEikDialogFlagNoShadow;
+	buttons = R_AVKON_SOFTKEYS_OK_EMPTY;
+	items=
+	{
+		DLG_LINE 
+		{
+			type = EAknCtPopupHeadingPane;
+			id = EAknMessageQueryHeaderId;
+			itemflags = EEikDlgItemNonFocusing;
+			control = AVKON_HEADING
+			{
+			};
+		},
+		DLG_LINE
+		{
+			type = EAknCtMessageQuery;
+			id = EAknMessageQueryContentId;
+			control = AVKON_MESSAGE_QUERY
+			{
+			};
+		}
+	};
+}
+
+
+RESOURCE DIALOG r_smsmgr_blank_note
+    {
+    flags = EAknInformationNoteFlags;
+    buttons=R_AVKON_SOFTKEYS_OK_EMPTY;//R_AVKON_SOFTKEYS_EMPTY;
+    items=
+        {
+        DLG_LINE
+            {
+            type=EAknCtNote;
+            id=ESmsMgrBlankNoteId;
+            control= AVKON_NOTE
+                {
+		          layout = EGeneralLayout;
+			      singular_label = "";
+	              plural_label = "";
+                };
+            }
+        };
+    }
+
+RESOURCE DIALOG r_smsmgr_delete_sms_query
+{
+		flags =		EGeneralQueryFlags;
+		buttons = R_AVKON_SOFTKEYS_YES_NO;
+    items =
+        {
+        DLG_LINE
+        {
+            type = EAknCtQuery;
+            id = EGeneralQuery;
+            control = AVKON_CONFIRMATION_QUERY
+                {
+                layout = EConfirmationQueryLayout;
+                label = "Delete SMS?";
+                };
+		}
+    };
+}
+
+	

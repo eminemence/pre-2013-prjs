@@ -1,0 +1,23 @@
+; SMSManager.pkg
+;
+;Language - standard language definitions
+&EN
+
+; standard SIS file header
+#{"SMSManager"},(0x10005b65),1,0,0
+
+;Supports Series 60 v 0.9
+(0x101F6F88), 0, 0, 0, {"Series60ProductID"}
+
+;
+"SMSManager.APP"-"C:\system\apps\SMSManager\SMSManager.app"
+"SMSManager.AIF"-"C:\system\apps\SMSManager\SMSManager.aif"
+"SMSManager.rsc"-"C:\system\apps\SMSManager\SMSManager.rsc"
+"SMSManager_caption.rsc"-"C:\system\apps\SMSManager\SMSManager_caption.rsc"
+"SMSManager.mbm"-"C:\system\apps\SMSManager\SMSManager.mbm"
+IF MachineUID = 0x101f4fc3;7650 
+	"dummy.tmp"-"C:\Sms\dummy.tmp"
+ELSEIF MachineUID = 0x101f466a OR MachineUID = 0x101f8c19 OR MachineUID = 0x101FB2B1 OR MachineUID = 0x101fb3dd ; 3650,N-Gage,QD
+	"dummy.tmp"-"C:\Sms\dummy.tmp"
+	"dummy.tmp"-"E:\Sms\dummy.tmp"
+ENDIF

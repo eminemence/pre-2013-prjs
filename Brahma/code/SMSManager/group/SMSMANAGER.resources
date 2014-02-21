@@ -1,0 +1,12 @@
+<resources>
+  <aif sourcefile = "SMSMANAGERAIF.RSS" sourcepath = "..\AIF" targetfile = "SMSMANAGER.AIF" targetpath = "Z\SYSTEM\APPS\SMSMANAGER">
+    <bmp bpp = "c24" sourcepath = "..\AIF" sourcefile = "LOGO.BMP"/>
+    <bmp bpp = "c24" sourcepath = "..\AIF" sourcefile = "LOGO_MASK.BMP"/>
+  </aif>
+  <rsc sourcefile = "SMSMANAGER.RSS" targetpath = "Z\SYSTEM\APPS\SMSMANAGER" header = "true" sourcepath = ".">
+    <language id = "SC"/>
+  </rsc>
+  <rsc sourcefile = "SMSMANAGER_CAPTION.RSS" targetpath = "Z\SYSTEM\APPS\SMSMANAGER" header = "true" sourcepath = ".">
+    <language id = "SC"/>
+  </rsc>
+</resources>
