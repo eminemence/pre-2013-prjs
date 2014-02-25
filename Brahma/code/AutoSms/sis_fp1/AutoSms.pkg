@@ -1,0 +1,14 @@
+; AutoSms.pkg
+;
+;Language - standard language definitions
+&EN
+0x10005B780x10005B78; standard SIS file header
+#{"AutoSms"},(0x10005B78),1,0,0
+
+;Supports Series 60 v 2.0
+(0x101F7960), 0, 0, 0, {"Series60ProductID"}
+
+; Files to copy
+"AutoSms.APP"-"c:\system\apps\AutoSms\AutoSms.APP"
+"AutoSms.rsc"-"c:\system\apps\AutoSms\AutoSms.rsc"
+

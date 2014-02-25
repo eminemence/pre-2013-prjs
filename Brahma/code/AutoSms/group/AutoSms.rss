@@ -1,0 +1,152 @@
+
+NAME AUTO
+
+#include <eikon.rh>
+#include <avkon.rsg>
+#include <avkon.rh>
+
+/*#include <eikon.rh>
+#include <eikon.rsg>
+#include <avkon.rh>
+#include <avkon.rsg>
+*/ 
+#include <avkon.mbg>
+
+#include "AutoSms.hrh"
+
+
+// ---------------------------------------------------------
+//   
+//    Define the resource file signature 
+//    This resource should be empty.
+//
+// ---------------------------------------------------------
+//
+RESOURCE RSS_SIGNATURE { }
+
+// ---------------------------------------------------------
+//   
+//    Default Document Name
+//
+// ---------------------------------------------------------
+//
+RESOURCE TBUF r_default_document_name { buf=""; }
+
+// ---------------------------------------------------------
+//   
+//    Define default menu and CBA key.
+//
+// ---------------------------------------------------------
+//
+RESOURCE EIK_APP_INFO
+    {
+    menubar = r_AutoSms_menubar;
+    cba = R_AVKON_SOFTKEYS_OPTIONS_EXIT;
+    }
+
+
+// ---------------------------------------------------------
+//   
+//   r_AutoSms_menubar
+//   Menubar for AutoSms example
+//
+// ---------------------------------------------------------
+//
+RESOURCE MENU_BAR r_AutoSms_menubar
+    {
+    titles =
+        {
+        MENU_TITLE {menu_pane = r_AutoSms_menu;}
+        };
+    }
+
+
+// ---------------------------------------------------------
+//   
+//   r_AutoSms_menu
+//   Menu for "Options"
+//
+// ---------------------------------------------------------
+//
+RESOURCE MENU_PANE r_AutoSms_menu
+    {
+    items = 
+        {
+        MENU_ITEM {command = EAutoSmsLeavingHomeCmd;  	txt = "Leavin Home";},
+        MENU_ITEM {command = EAutoSmsReachedOfficeCmd;  txt = "Reached office";},
+        MENU_ITEM {command = EAutoSmsInRickCmd;  		txt = "In rick";},
+        MENU_ITEM {command = EAutoSmsAtStopCmd;  		txt = "At stop";},
+        MENU_ITEM {command = EAutoSmsInBusCmd;  		txt = "In Bus";},        
+        MENU_ITEM {command = EAutoSmsReachedHomeCmd;  	txt = "Reached Home";},
+        MENU_ITEM {command = EAutoSmsShowAboutCmd;  	txt = "About";},
+        MENU_ITEM {command = EAknSoftkeyExit;   		txt = "Exit";}
+        };
+    }
+    
+    
+RESOURCE DIALOG r_aknexnote_wait_note_softkey_empty
+   {
+   flags = EAknWaitNoteFlags;
+   buttons = R_AVKON_SOFTKEYS_EMPTY;
+   items =
+       {
+       DLG_LINE
+           {
+           type = EAknCtNote;
+           id = 1;
+           control= AVKON_NOTE
+               {
+               layout = EWaitLayout;
+               singular_label = "Starting app....";
+               //plural_label = "";
+               imagefile = "\\system\\data\\avkon.mbm";
+               imageid = EMbmAvkonQgn_note_sml;
+               imagemask = EMbmAvkonQgn_note_sml_mask;
+               //iconfile=AVKON_BMPFILE_NAME;
+               //iconid=EMbmAvkon30x40;
+               //iconmask=0xffff;
+               animation = R_QGN_GRAF_WAIT_BAR_ANIM;
+               };
+           }
+       };
+   }    
+   
+   
+RESOURCE TBUF r_about_title 
+{ 
+	buf = "-=[About]=-"; 
+}
+
+RESOURCE TBUF r_about
+{
+	buf = "AutoSms v1.0\nYou can send predefined sms msgs at the click of a menu.No more typin the same msg again and again.Enjoy.:-*";
+} 
+
+   
+
+RESOURCE DIALOG r_message_query
+ {
+        flags = EGeneralQueryFlags | EEikDialogFlagNoBorder | EEikDialogFlagNoShadow;
+        buttons = R_AVKON_SOFTKEYS_OK_EMPTY;
+        items=
+        {
+                DLG_LINE
+                {
+                        type = EAknCtPopupHeadingPane;
+                        id = EAknMessageQueryHeaderId;
+                        itemflags = EEikDlgItemNonFocusing;
+                        control = AVKON_HEADING
+                        {
+                        };
+                },
+                DLG_LINE
+                {
+                        type = EAknCtMessageQuery;
+                        id = EAknMessageQueryContentId;
+                        control = AVKON_MESSAGE_QUERY
+                        {
+                        };
+                }
+        };
+ }
+ 

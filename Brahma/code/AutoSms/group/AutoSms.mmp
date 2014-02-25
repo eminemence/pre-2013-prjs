@@ -1,0 +1,38 @@
+
+TARGET        AutoSms.app
+TARGETTYPE    app
+
+TARGETPATH    \system\apps\AutoSms
+UID               0x100039CE 0x10005B78
+
+LANG              SC
+
+SOURCEPATH        ..\src
+DOCUMENT		  Series_60_APP_ReadMe.txt
+SOURCE            AutoSms.cpp
+SOURCE            AutoSmsApplication.cpp 
+SOURCE            AutoSmsAppView.cpp
+SOURCE            AutoSmsAppUi.cpp
+SOURCE            AutoSmsDocument.cpp 
+SOURCE            SmsEngine.cpp 
+SOURCE		  EventLogger.cpp
+SOURCEPATH        ..\group
+
+
+USERINCLUDE       ..\inc 
+
+SYSTEMINCLUDE     \epoc32\include
+
+LIBRARY           euser.lib
+LIBRARY           apparc.lib
+LIBRARY           cone.lib 
+LIBRARY           eikcore.lib  
+LIBRARY           avkon.lib  
+LIBRARY           msgs.lib  
+LIBRARY           smcm.lib
+LIBRARY           etext.lib
+LIBRARY		  gsmu.lib 
+LIBRARY		  flogger.lib 
+
+
+RESOURCE      AutoSms.rss
